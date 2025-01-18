@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
 
   <body style="text-align: center">
@@ -31,7 +35,7 @@
       <div class="g-text">
         <h1 class="s-text">ВИДЕО</h1>
       </div>
-      <div class="contentisc">
+      <!-- <div class="contentisc">
         <div class="video-player">
           <video id="video">
             <source src="./VIDEO/00001_1.mp4" type="video/mp4" />
@@ -87,6 +91,41 @@
         </div>
         <div class="vidosicsis">
           <video src="./VIDEO/0002.mp4" poster="#" controls></video>
+        </div>
+      </div> -->
+
+      <div class="video-container">
+        <div class="video-wrapper">
+          <video id="myVideo" class="video-player" preload="auto">
+            <source src="./VIDEO/00001_1.mp4" type="video/mp4" />
+            Ваш браузер не поддерживает видео тег.
+          </video>
+          <div class="video-controls">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="controls-main">
+              <button class="play-pause">
+                <i class="fas fa-play"></i>
+              </button>
+              <div class="time">
+                <span class="current">0:00</span>
+                <span>/</span>
+                <span class="duration">0:00</span>
+              </div>
+              <div class="volume-container">
+                <button class="volume">
+                  <i class="fas fa-volume-up"></i>
+                </button>
+                <div class="volume-slider">
+                  <div class="volume-progress"></div>
+                </div>
+              </div>
+              <button class="fullscreen">
+                <i class="fas fa-expand"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
