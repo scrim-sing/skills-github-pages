@@ -266,3 +266,11 @@ video {
   margin-left: 1.6rem;
   margin-top: 4rem;
 }
+.navbar-toggler {
+  margin-left: 0.3rem;
+  margin-right: 1.8rem;
+}
+.navbar-expand-lg {
+  border-end-end-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
