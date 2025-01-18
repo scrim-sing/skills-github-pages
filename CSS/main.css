@@ -314,13 +314,20 @@ video {
   opacity: 1;
 }
 
+.controls-main {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 10px;
+}
+
 .progress-bar {
-  width: 100%;
+  flex-grow: 1;
   height: 4px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 2px;
   cursor: pointer;
-  margin-bottom: 10px;
+  position: relative;
 }
 
 .progress {
@@ -331,12 +338,6 @@ video {
   transition: width 0.1s;
 }
 
-.controls-main {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
 button {
   background: none;
   border: none;
@@ -344,16 +345,14 @@ button {
   cursor: pointer;
   padding: 5px;
   font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
 }
 
 button:hover {
   transform: scale(1.1);
-}
-
-.time {
-  color: white;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
 }
 
 .volume-container {
@@ -372,7 +371,7 @@ button:hover {
 }
 
 .volume-container:hover .volume-slider {
-  width: 100px;
+  width: 60px;
 }
 
 .volume-progress {
@@ -382,17 +381,29 @@ button:hover {
   transform: translateX(-20%);
 }
 
+/* Добавляем эффект наведения для прогресс-бара */
+.progress-bar:hover {
+  height: 6px;
+  transform: translateY(-1px);
+}
+
+.progress-bar:hover .progress {
+  background: #ff3333;
+}
+
 @media (max-width: 768px) {
   .video-controls {
     padding: 5px;
   }
 
-  button {
-    font-size: 16px;
+  .controls-main {
+    gap: 10px;
+    padding: 0 5px;
   }
 
-  .time {
-    font-size: 12px;
+  button {
+    font-size: 16px;
+    min-width: 28px;
   }
 
   .volume-slider {
